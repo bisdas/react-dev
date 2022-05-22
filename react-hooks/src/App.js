@@ -1,7 +1,9 @@
 import useLocalStorage from './hooks/useLocalStorage'
+import useUpdateLogger from './hooks/useUpdateLogger'
 
 function App() {
   const [name, setName] = useLocalStorage('name', '');
+  useUpdateLogger(name);
 
   return (
     <div className="App">
